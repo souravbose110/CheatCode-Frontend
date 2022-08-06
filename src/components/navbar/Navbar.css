@@ -1,0 +1,153 @@
+.container {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    margin-top: 0.3rem;
+}
+
+.container-left {
+    display: flex;
+    margin-left: 1rem;
+    color: black;
+    gap: 2rem;
+}
+
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.nav-explore,
+.nav-about,
+.nav-problems {
+    font-size: 1.1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+    position: relative;
+}
+
+.nav-about::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 70%;
+    width: 0;
+    height: 0.1rem;
+    background-color: black;
+}
+
+.nav-about:hover::before{
+    width: 100%;
+    background-color: blue;
+    transition: all 0.5s linear;
+}
+
+.nav-logo:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 70%;
+    width: 0;
+    height: 0.1rem;
+    background-color: black;
+}
+
+.nav-logo:hover:before {
+    width: 100%;
+    background-color: blue;
+    transition: all 0.5s linear;
+}
+
+.nav-explore:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 70%;
+    width: 0;
+    height: 0.1rem;
+    background-color: black;
+}
+
+.nav-explore:hover:before {
+    width: 100%;
+    background-color: blue;
+    transition: all 0.5s linear;
+}
+
+.nav-problems:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 70%;
+    width: 0;
+    height: 0.1rem;
+    background-color: black;
+}
+
+.nav-problems:hover:before {
+    width: 100%;
+    background-color: blue;
+    transition: all 0.5s linear;
+}
+
+
+.container-right {
+    display: flex;
+    margin: 0.6rem;
+}
+
+/* .container-right img{
+    cursor: pointer;
+    height: 2.4rem;
+} */
+
+.active {
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.hidden {
+    visibility: hidden;
+    transition: all 0.5s;
+    transform: translateY(-100%);
+}
+
+.login-signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-pages{
+    display: none;
+}
+
+
+@media (max-width: 991px) {
+    .container {
+        grid-template-columns: 87% 13%;
+    }
+
+    .container-left {
+        margin-left: 1rem;
+    }
+
+    .nav-explore,
+    .nav-problems {
+        display: none;
+    }
+
+    .menu-pages{
+        display: block;
+    }
+
+}

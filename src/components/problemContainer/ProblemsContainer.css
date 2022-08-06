@@ -1,0 +1,67 @@
+.p-container {
+  /* margin-right: 1.4rem;
+    margin-left: 3.4rem;
+    margin-top: 5rem; */
+  margin: 0rem 10rem;
+  /* display: grid; */
+
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 68% 32%; */
+}
+
+.all-topics {
+  background-color: rgba(0, 0, 0, 0.794);
+  color: white;
+  margin: 3rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  border-radius: 1rem;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p-d-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.progress-bar {
+  display: none;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.difficulty-selecter {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.p-container-top {
+  color: rgba(0, 0, 0, 0.383);
+  display: flex;
+  border-bottom: 1px solid gray;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+
+.p-container-top p {
+  font-size: 1rem;
+}
+
+@media (max-width: 991px) {
+  .p-container {
+    margin: 5rem 0.5rem;
+  }
+
+  .progress-bar {
+    display: flex;
+  }
+
+  .p-d-container {
+    justify-content: space-between;
+  }
+}

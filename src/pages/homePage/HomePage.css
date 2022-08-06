@@ -1,0 +1,12 @@
+nav {
+    background-color: #42378f;
+    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 3.5rem;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
