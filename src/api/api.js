@@ -25,7 +25,7 @@ export const fetchQues = async (
 export const submitSolved = async (id, token) => {
   try {
     const response = await axios.post(
-      process.env.REACT_APP_postSubmittedQuestionsRoute,
+      process.env.REACT_APP_POST_SUBMITTED_QUESTIONS_ROUTE,
       {
         question_id: id,
       },
@@ -40,7 +40,7 @@ export const submitSolved = async (id, token) => {
 
 export const fetchTags = async (token) => {
   try {
-    const response = await axios.get(process.env.REACT_APP_getTagsRoute, {
+    const response = await axios.get(process.env.REACT_APP_GET_TAGS_ROUTE, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -58,7 +58,7 @@ export const fetchTags = async (token) => {
 export const fetchQuestions = async (id, page, token) => {
   try {
     const response = await axios.get(
-      process.env.REACT_APP_getTagsRoute + `/${id}?page=${page}`,
+      process.env.REACT_APP_GET_TAGS_ROUTE + `/${id}?page=${page}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
