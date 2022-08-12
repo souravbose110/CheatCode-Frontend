@@ -1,5 +1,4 @@
 import axios from "axios";
-import apiRoutes from "./ApiRoutes";
 
 export const fetchQues = async (
   token,
@@ -26,7 +25,7 @@ export const fetchQues = async (
 export const submitSolved = async (id, token) => {
   try {
     const response = await axios.post(
-      "https://cheatcode.pythonanywhere.com/completed",
+      process.env.REACT_APP_postSubmittedQuestionsRoute,
       {
         question_id: id,
       },
@@ -41,7 +40,7 @@ export const submitSolved = async (id, token) => {
 
 export const fetchTags = async (token) => {
   try {
-    const response = await axios.get(apiRoutes.getTagsRoute, {
+    const response = await axios.get(process.env.REACT_APP_getTagsRoute, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -59,7 +58,7 @@ export const fetchTags = async (token) => {
 export const fetchQuestions = async (id, page, token) => {
   try {
     const response = await axios.get(
-      apiRoutes.getTagsRoute + `/${id}?page=${page}`,
+      process.env.REACT_APP_getTagsRoute + `/${id}?page=${page}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
